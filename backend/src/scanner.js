@@ -13,6 +13,7 @@ async function scanner( args ) {
       logLevel: 'info',
     };
     if ( args.chromePort ) {
+      opts.hostname = args.chromeHost;
       opts.port = args.chromePort;
     } else {
       var launcherArgs = {

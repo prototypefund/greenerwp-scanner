@@ -2,7 +2,7 @@
   "name": "greenerwp-scanner-backend",
   "version": "0.0.0",
   "scripts": {
-    "start": "npm run build && node dist/index.js",
+    "start": "node dist/index.js",
     "startdev": "npm run build && nodemon dist/index.js",
     "build": "babel index.js -d dist"
   },

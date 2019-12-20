@@ -1,0 +1,32 @@
+version: "3.1"
+
+services:
+  chrome:
+    image: browserless/chrome
+  frontend:
+    image: node:lts-buster
+    user: node
+    working_dir: /home/node/app
+    environment:
+      - NODE_ENV=production
+      - SCANNER_BACKEND_ADDRESS=http://backend:3001
+    volumes:
+      - ../frontend:/home/node/app/
+    restart: always
+    ports:
+      - 1234:1234
+    command:
+      npm start
+  backend:
+    image: node:lts-buster
+    user: node
+    working_dir: /home/node/app
+    environment:
+      - NODE_ENV=production
+      - CHROME_DEBUGGING_PORT=3000
+      - CHROME_DEBUGGING_HOST=chrome
+    volumes:
+      - ../backend:/home/node/app/
+    restart: always
+    command:
+      npm start

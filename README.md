@@ -28,8 +28,13 @@ PM2: `pm2 start dist/index.js`.
 ### Frontend
 
 Install dependencies with `npm install` and start the server with `npm run
-startproxy`. It expects the scanner backend running on port 3001. The scanner
+startproxy`. It expects the scanner backend running on http://localhost:3001
+(overwrite with `SCANNER_BACKEND_ADDRESS` environment variable). The scanner
 itself will run on port 1234.
 
 You can also directly run `src/proxy.js`, for example with a process runner like
 PM2: `pm2 start src/proxy.js`.
+
+### Using Docker
+
+Build both backend and frontend and run `docker-compose up` in docker/

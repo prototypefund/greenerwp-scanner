@@ -12,6 +12,7 @@ router.get('/', async function(req, res, next) {
     const results = await scanner({
       url: req.query.url,
       emulatedDevice: req.query.device,
+			chromeHost: process.env.CHROME_DEBUGGING_HOST || null,
 			chromePort: process.env.CHROME_DEBUGGING_PORT || null,
     });
     scanInProgress = false;

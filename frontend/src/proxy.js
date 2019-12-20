@@ -1,5 +1,10 @@
 const ParcelProxyServer = require('parcel-proxy-server');
 
+var backendAddress = 'http://localhost:3001';
+if ( process.env.SCANNER_BACKEND_ADDRESS ) {
+	backendAddress = process.env.SCANNER_BACKEND_ADDRESS;
+}
+
 // configure the proxy server
 const server = new ParcelProxyServer({
   entryPoint: './index.html',
@@ -15,7 +20,7 @@ const server = new ParcelProxyServer({
   proxies: {
     // add proxies here
     '/analyse': {
-      target: 'http://localhost:3001'
+      target: backendAddress,
     }
   }
 });
