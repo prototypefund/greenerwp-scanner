@@ -1,0 +1,22 @@
+{
+  "name": "greenerwp-scanner-backend",
+  "version": "0.0.0",
+  "scripts": {
+    "start": "npm run build && node dist/index.js",
+    "startdev": "npm run build && nodemon dist/index.js",
+    "build": "babel index.js -d dist"
+  },
+  "dependencies": {
+    "chrome-launcher": "^0.11.2",
+    "chromium": "^2.1.1",
+    "express": "~4.16.1",
+    "lighthouse": "^5.2.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.6.4",
+    "@babel/core": "^7.6.4",
+    "@babel/plugin-proposal-object-rest-spread": "^7.6.2",
+    "@babel/preset-env": "^7.6.3",
+    "nodemon": "^1.19.2"
+  }
+}

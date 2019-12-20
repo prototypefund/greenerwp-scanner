@@ -1,0 +1,40 @@
+{
+  "name": "greenerwp-scanner-frontend",
+  "version": "0.0.0",
+  "dependencies": {
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "react-lighthouse-viewer": "^2.0.0"
+  },
+  "scripts": {
+    "oldstart": "react-scripts start",
+    "start": "parcel index.html",
+    "startproxy": "node src/proxy.js",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "proxy": "http://localhost:3001",
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "parcel-bundler": "^1.12.3",
+    "parcel-proxy-server": "^1.1.0"
+  }
+}
