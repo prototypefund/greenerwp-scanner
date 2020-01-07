@@ -37,4 +37,5 @@ PM2: `pm2 start src/proxy.js`.
 
 ### Using Docker
 
-Build both backend and frontend and run `docker-compose up` in docker/
+Build both backend and frontend and run `docker-compose up` in `docker/`. The
+frontend will we available on `http://localhost:1234/`.
