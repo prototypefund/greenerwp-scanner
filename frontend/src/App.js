@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import './App.css';
 import SearchBar from './SearchBar.js';
 import Results from './Results.js';
+
+import Howto from './Howto';
 import WelcomeMessage from './WelcomeMessage';
 import LoadingMessage from './LoadingMessage';
 import ErrorMessage from './ErrorMessage';
@@ -78,7 +80,8 @@ class App extends Component {
       <div className="App">
         <SearchBar url={url} device={device} onSubmit={(args) => this.handleSubmit(args)} isLoading={this.state.isLoading}/>
         {this.state.scanInProgress && <ScanInProgressMessage/>}
-        {this.state.firstRun && <WelcomeMessage/>}
+			<Howto/>
+				{this.state.firstRun && <WelcomeMessage/>}
         {this.state.isLoading && <LoadingMessage/>}
         {this.state.error && <ErrorMessage error={this.state.error}/>}
         {this.state.results && <Results results={this.state.results}/>}
