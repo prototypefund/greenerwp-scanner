@@ -1,7 +1,6 @@
 # greenerWP Scanner Backend
 
-This is the implementation of greenerWP's [website
-scanner](https://scan.greenerwp.net/).
+This is the implementation of greenerWP's [webpage scanner](https://scan.greenerwp.net/).
 
 The backend listens for requests from the frontend and launches Chromium and
 Lighthouse.

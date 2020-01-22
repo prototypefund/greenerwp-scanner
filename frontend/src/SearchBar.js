@@ -49,7 +49,7 @@ class SearchBar extends Component {
               <input className="form-control" type="url" value={this.state.url}
 							name="url"
 							onChange={this.handleInputChange} required
-							placeholder={__('Enter website URL (e.g. https://greenerwp.net)')}/>
+							placeholder={__('Enter page URL (e.g. https://greenerwp.net/guides)')}/>
 
               <span className="input-group-append">
                 <button disabled={this.props.isLoading} className="btn btn-secondary" type="submit">

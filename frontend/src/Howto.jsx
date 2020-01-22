@@ -13,8 +13,8 @@ function Howto(props) {
 					<div className="card-body">
 						<h2>{__("Start a scan")}</h2>
 						<p>
-							{__("Scan a page of your website by entering its URL and choosing \"Mobiles\" or \"Desktops\".") + ' '}
-							{__("As some websites are not equally optimised for both mobiles and desktops, run the scan for each of them and compare the results.") + ' '}
+							{__("Scan an individual page of your website by entering its URL and choosing \"Mobiles\" or \"Desktops\".") + ' '}
+							{__("As some webpages are not equally optimised for both mobiles and desktops, run the scan for each of them and compare the results.") + ' '}
 						</p>
 						<h2>{__("What is the score about?")}</h2>
 						<p>
